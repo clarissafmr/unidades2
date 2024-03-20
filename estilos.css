@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+.title{
+    font-size: 3rem;
+    background: none;
+    color: crimson;
+    border-bottom: none;
+    margin: 40px;
+    text-align: center;
+}
+/* Este se activará cuando se pasen los 700px de ancho*/
+@media screen and (min-width:700px){
+    body{
+        background-color: chocolate;
+}}
+/* cuando el minimo sea 400px se activara, el fondo y el color de fuente cambiará*/
+@media screen and(min-width: 400px), (max-width:700px) {
+    .title{
+        background: #000;
+        color: #fff;
+    }
+}
+/*el color de fondo cambiará a azul cuando el maximo sea 600px*/
+@media screen and (max-width:600px){
+    .title{
+        text-align: left;
+        background: steelblue;
+    }
+}
+/* el tipo de letra y el color cambiará a la hora de imprimir*/
+@media print {
+    .title{
+        color: steelblue;
+        font-size: 5rem;
+        text-align: right;
+        font-family: cursive;
+    }
+}
